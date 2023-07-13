@@ -6,11 +6,14 @@ ScanCropper is a Python script designed to identify, crop, and correctly orient 
 
 Suppose you have a photo album and you scan 2 photos at a time, leaving some space between them on the scanner. Simply run the script with the `--photos-per-scan 2` option on your scanned files. For each file it processes, it will output 2 individual, cropped, and correctly oriented photos from the scan.
 
-![Example Scan](./example.png "Scanned input file in .png format")
+<p>Example Scan:</p>
+<img src="example.png" width="500" alt="Scanned input file in .png format">
 
-![Result Image 0](./example_0.png "Output image 0")
+<p>Result Image 0:</p>
+<img src="example_0.png" width="500" alt="Output image 0">
 
-![Result Image 1](./example_1.png "Output image 1")
+<p>Result Image 1:</p>
+<img src="example_1.png" width="500" alt="Output image 1">
 
 ## Requirements
 
