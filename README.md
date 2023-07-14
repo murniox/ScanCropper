@@ -13,7 +13,7 @@ python3 scan_cropper.py --photos-per-scan 3 --dir ./scans --odir ./images --manu
 ```
 
 <p>Example Scan:</p>
-<img src="./scans/example.pdf" width="500" alt="Scanned input file in .png format">
+<img src="./scans/example.PDF" width="500" alt="Scanned input file in .pdf format">
 
 <p>Result Image 0:</p>
 <img src="./images/example_0.jpg" width="300" alt="Output image 0">
@@ -22,7 +22,7 @@ python3 scan_cropper.py --photos-per-scan 3 --dir ./scans --odir ./images --manu
 <img src="./images/example_1.jpg" width="300" alt="Output image 1">
 
 <p>Result Image 2:</p>
-<img src="./images/example_2.jpg" width="300" alt="Output image 1">
+<img src="./images/example_2.jpg" width="450" alt="Output image 1">
 
 ## Requirements
 
