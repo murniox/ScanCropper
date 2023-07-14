@@ -13,10 +13,19 @@ class ArgParser:
 			"\nCan process multiple photos in a single scan.",
 			formatter_class=argparse.ArgumentDefaultsHelpFormatter)
         parser.add_argument('--dir', '-d', type=str,
-                            help="Specify the location of the pictures to process.")
+                            help="Specify the location of the scans to process.")
                             
         parser.add_argument('--odir', '-o', type=str,
-                            help="Specify where to save the processed scans.")
+                            help="Specify where to save the output images.")
+        
+        parser.add_argument('--output-format', '-of', type=str, default='jpg',
+                            help='Defines the image output format (jpg or png).')
+
+        parser.add_argument('--manual-name', '-mn', action='store_true',
+                            help='Manually name each photo.')
+        
+        parser.add_argument('--manual-metadata', '-mm', action='store_true',
+                            help='Manually add metadata to each photo. Only works if --output-format jpg')
                             
         parser.add_argument('--num-threads', '-n', dest='threads', type=int, default=0,
                             help="Number of threads to use." +
@@ -43,8 +52,9 @@ class ArgParser:
                             help="Append the prefix string to the start of output image file names.")
         args = parser.parse_args()
 
+        
         # Check if input and output directories are specified.
         if args.dir is None or args.odir is None:
             raise Exception("Input and Output directory must be specified")
-        
-        return Settings(args.threads, args.thresh, args.blur, args.scale, args.dir, args.odir, args.output_file_name_prefix)
+
+        return Settings(args.threads, args.thresh, args.blur, args.scale, args.dir, args.odir, args.output_file_name_prefix, args.manual_name, args.manual_metadata, args.output_format)
